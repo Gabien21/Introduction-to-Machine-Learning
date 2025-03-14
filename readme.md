@@ -5,6 +5,7 @@ This is a part of the **Introduction to Machine Learning** course at **Universit
 
 ## Task Definition
 Given a dataset of handwritten digits, the objective is to develop a machine learning model that can accurately classify an image into one of ten classes (0-9). Specifically, we are given a set of training samples:
+
 $$\{(\mathbf{x}^{(1)}, y^{(1)}), ..., (\mathbf{x}^{(N_{train})}, y^{(N_{train})})\}$$
 
 where:
@@ -20,7 +21,8 @@ The **MNIST dataset** consists of **28x28 grayscale images** of handwritten digi
 ## Implemented Techniques
 ### 1. Softmax Regression
 - Softmax regression is a **generalized logistic regression** for multi-class classification.
-- Given an input vector \(x\), we compute the probability of each class \(y\) using the softmax function:
+- Given an input vector $x$, we compute the probability of each class $y$ using the softmax function:
+  
   $$P(y = k | x) = \frac{e^{w_k \cdot x}}{\sum_{j=0}^{9} e^{w_j \cdot x}}$$
 - The model is trained using **cross-entropy loss** and optimized with **gradient descent**.
 
