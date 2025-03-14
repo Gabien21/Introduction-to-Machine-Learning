@@ -8,10 +8,10 @@ Given a dataset of handwritten digits, the objective is to develop a machine lea
 $$\{(\mathbf{x}^{(1)}, y^{(1)}), ..., (\mathbf{x}^{(N_{train})}, y^{(N_{train})})\}$$
 
 where:
-- \( \mathbf{x}^{(n)} \in \mathbb{R}^{784} \) represents the pixel values of a 28x28 grayscale image, flattened into a 784-dimensional vector.
-- \( y^{(n)} \in \{0, 1, ..., 9\} \) is the corresponding digit label.
+- $\mathbf{x}^{(n)} \in \mathbb{R}^{784}$ represents the pixel values of a 28x28 grayscale image, flattened into a 784-dimensional vector.
+- $y^{(n)} \in \{0, 1, ..., 9\}$ is the corresponding digit label.
 
-The task is to learn a function \( f: \mathbb{R}^{784} \to \{0, 1, ..., 9\} \) that can predict the correct digit for a given unseen sample.
+The task is to learn a function $f: \mathbb{R}^{784} \to \{0, 1, ..., 9\}$ that can predict the correct digit for a given unseen sample.
 
 ## Dataset: MNIST
 The **MNIST dataset** consists of **28x28 grayscale images** of handwritten digits (0-9). Each image is represented as as **784-dimentional vector** (flattened pixel values). The goal is to build models that can classify these images correctly.
@@ -21,9 +21,7 @@ The **MNIST dataset** consists of **28x28 grayscale images** of handwritten digi
 ### 1. Softmax Regression
 - Softmax regression is a **generalized logistic regression** for multi-class classification.
 - Given an input vector \(x\), we compute the probability of each class \(y\) using the softmax function:
-  $$
-  P(y = k | x) = \frac{e^{w_k \cdot x}}{\sum_{j=0}^{9} e^{w_j \cdot x}}
-  $$
+  $$P(y = k | x) = \frac{e^{w_k \cdot x}}{\sum_{j=0}^{9} e^{w_j \cdot x}}$$
 - The model is trained using **cross-entropy loss** and optimized with **gradient descent**.
 
 ### 2. Feature Engineering: Adding Intensity and Symmetry
